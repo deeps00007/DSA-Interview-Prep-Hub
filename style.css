@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    font-size: 2rem;
+    background-color: red;
+    padding: 14px 17px;
+}
+header{
+    margin: 0 0;
+    height: auto;
+    width: 100%;
+    z-index: 100;
+}
+.container{
+    padding: 100px 0;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    background: url(/photos/gray\ background.jpg)no-repeat center center/cover;
+}
+.box{
+    height: 250px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 100px 60px;
+    transition: 1s;
+    object-fit: cover;
+}
+.box:hover img{
+    /* translate: 120px 4rem -150px; */
+    translate: -25% -22%;
+    transition: 1s;
+}
+/* .box:hover{
+    transform: scaleY(1.2,1.2);
+    transition: 1s;
+} */
+.imgBox img{
+    height: 250px;
+    width: 300px;
+    border-radius: 12px;
+    transition: 1s;
+}
+.box:hover .content{
+position: relative;
+bottom: 80px;
+left: 60px;
+transition: 2s ease-in-out;
+visibility: visible;
+}
+ .content{
+ visibility: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    color:black;
+    position: relative;
+}
+footer{
+    height: auto;
+    width: 100%;
+    background-color: red;
+}
+footer p{
+    text-align: center;
+    color:white;
+    padding: 4px 6px;
+    font-size: 20px;
+}
+
+/* this styling is for table */
+th,td{
+    border: 3px solid black;
+    padding: 2px;
+    width: 30%;
+    text-align: center;
+}
+caption{
+   color: red;
+   font-size: 30px;
+   font-weight: 400;
+}
+
+
+/* this styling is about media querry */
+@media (max-width:1200px) {
+   html{
+    height: 50%;
+   }
+}

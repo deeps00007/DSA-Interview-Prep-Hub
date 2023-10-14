@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Question</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(/photos/gray\ background.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        table {
+            width: 90%;
+            /* Increased table width to 90% */
+            max-width: 1250px;
+            /* Increased the max-width of the table */
+            margin: 20px auto;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            color: #0056b3;
+        }
+
+        th.serial-column {
+            width: 10%;
+            text-align: center;
+        }
+
+        th.link-column {
+            width: 55%;
+            /* Adjusted width of the "Link" column */
+        }
+
+        th.notes-column {
+            width: 5%;
+            /* Added a new "Notes" column and set its width */
+        }
+
+        th.button-column {
+            width: 20%;
+            text-align: center;
+        }
+
+        td.serial-column,
+        td.link-column,
+        td.notes-column,
+        td.button-column {
+            text-align: center;
+        }
+
+        td button {
+            background-color: #060606;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        td button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* padding: 45px 0% 8% 8%; */
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline;
+            flex-direction: row;
+            padding: 7px 25px;
+        }
+
+        nav ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(14, 4, 6);
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Question of Arrays</h1>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="serial-column">Serial Number</th>
+                <th class="link-column"> Question Link</th>
+                <th class="notes-column">Solutions</th>
+                <th class="button-column">Platforms</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="serial-column">1</td>
+                <td class="link-column"><a href="#">Link 1</a></td>
+                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="button-column">
+                    <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems" target="_blank"><button
+                        ><img
+                            src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px" height="25px"
+                            alt="icon" style="float: right; cursor: pointer;"></button></a>
+                    
+                    <a href="#"><button><img
+                            src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px" alt="icon"
+                            style="float: right; cursor: pointer;"></button></a>
+                    <button onclick="window.location.href = '#';"><img
+                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                </td>
+            </tr>
+            
+            <!-- Add more rows for additional data -->
+        </tbody>
+    </table>
+
+    <footer>
+
+        <nav>
+            <ul>
+                <li><a href="/about,conatct_pages/about.html" target="_blank">About</a></li>
+                <li><a href="/about,conatct_pages/contacts.html" target="_blank">Contact</a></li>
+                <!-- <li><a href="/contacts.html" target="_blank">Contact</a></li>
+                <li><a href="/contacts.html" target="_blank">Contact</a></li> -->
+            </ul>
+        </nav>
+        &copy; DSA_interview_prep_HUB
+    </footer>
+</body>
+
+</html>
