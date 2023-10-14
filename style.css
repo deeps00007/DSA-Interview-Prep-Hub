@@ -18,7 +18,7 @@ header{
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
-    background: url(/photos/gray\ background.jpg)no-repeat center center/cover;
+    background: url(./photos/gray\ background.jpg)no-repeat center center/cover;
 }
 .box{
     height: 250px;
