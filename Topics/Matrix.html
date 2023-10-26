@@ -143,8 +143,11 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="../index.html" style="text-decoration: none ; cursor: pointer; color: rgb(63, 248, 248); font-size:120%;">Topics</a>/Matrix</h1>
+    <header style="display: flex; flex-direction: row;
+    justify-content: end;">
+        <h1 style="margin-right: 40%; "><a href="../index.html" style="text-decoration: none ; cursor: pointer; color: rgb(63, 248, 248); font-size:120%;">Topics</a>/Matrix</h1>
+        <button id="musicbtn" style="border-radius: 10%; background-color: aqua;">PlayM</button>
+        <button id="pausebtn" style="border-radius: 10%; background-color: aqua;">PauseM</button>
     </header>
 
     <table>
@@ -357,5 +360,18 @@
         &copy; DSA_interview_prep_HUB
     </footer>
 </body>
+<script>
+    const audio=new Audio("Audio1.mp3");
+    audio.pause();
+    const btn=document.getElementById("musicbtn");
+    btn.addEventListener("click",()=>{
+   audio.play();
+    })
+    const stopmusin=document.getElementById("pausebtn");
+    stopmusin.addEventListener("click",()=>{
+        audio.pause();
+    })
+
+</script>
 
 </html>
