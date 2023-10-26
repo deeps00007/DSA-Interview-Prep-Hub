@@ -10,6 +10,7 @@ body{
     background-image: url(./photos/gray\ background.jpg);
     background-position: center;
     background-size: cover;
+    
 }
 
 /* Apply some basic styling to the header */
@@ -18,14 +19,20 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
+
 }
 
 /* Style the header image */
 .header-image {
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 5px;
     /* border-radius: 150px; */
 }
+.header-image  img{
+    border-radius: 30px;
+    border: 3px solid red;
+}
+
 
 .header-image img {
     max-width: 100%;
@@ -54,6 +61,9 @@ header {
     background-color: #4953532d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
+}
+.video-box p{
+    margin-top: 20px;
 }
 
 .video-box:hover {
