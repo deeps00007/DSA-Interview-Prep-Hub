@@ -1060,16 +1060,38 @@
     </footer>
 </body>
 <script>
-    const audio=new Audio("Audio1.mp3");
-    audio.pause();
-    const btn=document.getElementById("musicbtn");
-    btn.addEventListener("click",()=>{
-   audio.play();
-    })
-    const stopmusin=document.getElementById("pausebtn");
-    stopmusin.addEventListener("click",()=>{
-        audio.pause();
-    })
+    const audio = new Audio();
+    let songQueue = []; // Array to store song URLs
+    let currentSongIndex = 0; // Index of the currently playing song
 
+    function playNextSong() {
+        if (currentSongIndex < songQueue.length) {
+            audio.src = songQueue[currentSongIndex];
+            audio.play();
+            currentSongIndex++;
+        }
+    }
+
+    const btn = document.getElementById("musicbtn");
+    btn.addEventListener("click", () => {
+        // Add songs to the queue
+        songQueue.push("Superfast Breathless Hanuman Chalisa Shankar Mahadevan Hanuman Chalisa New Version हनमन चलस [TubeRipper.com].mp3");
+        songQueue.push("Samay Samjhayega Full Song Tum Prem Ho Sad Radha Krishn LOFI MOhit lalwani Surya Raj Kamal [TubeRipper.com].mp3");
+        songQueue.push("rain-and-tears-sad-piano-music-with-rain-and-thunderstorm-7804.mp3");
+        songQueue.push("in-the-room-when-the-rain-pouring-117209.mp3");
+        // Start playing songs from the queue
+        playNextSong();
+    });
+
+    const stopmusin = document.getElementById("pausebtn");
+    stopmusin.addEventListener("click", () => {
+        audio.pause();
+    });
+
+    // Event listener for when a song ends
+    audio.addEventListener("ended", () => {
+        playNextSong();
+    });
 </script>
+
 </html>
