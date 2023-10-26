@@ -142,10 +142,11 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="../index.html"
-                style="text-decoration: none ; cursor: pointer; color: rgb(63, 248, 248); font-size:120%;">Topics</a>/Arrays
-        </h1>
+    <header style="display: flex; flex-direction: row;
+    justify-content: end;">
+        <h1 style="margin-right: 40%; "><a href="../index.html" style="text-decoration: none ; cursor: pointer; color: rgb(63, 248, 248); font-size:120%;">Topics</a>/Arrays</h1>
+        <button id="musicbtn" style="border-radius: 30%; background-color: rgb(78, 135, 214);"><img src="../photos/music-1085655_1280.png" height="30px" width="40px" style="justify-content: center;"></button>
+        <button id="pausebtn" style="border-radius: 30%; background-color: rgb(48, 62, 132);"><img src="../photos/pause-303651_1280.png" height="30px" width="40px" style="justify-content: center;"></button>
     </header>
 
     <table>
@@ -515,6 +516,19 @@
         </nav>
         &copy; DSA_interview_prep_HUB
     </footer>
+    
 </body>
+<script>
+    const audio=new Audio("Audio1.mp3");
+    audio.pause();
+    const btn=document.getElementById("musicbtn");
+    btn.addEventListener("click",()=>{
+   audio.play();
+    })
+    const stopmusin=document.getElementById("pausebtn");
+    stopmusin.addEventListener("click",()=>{
+        audio.pause();
+    })
 
+</script>
 </html>

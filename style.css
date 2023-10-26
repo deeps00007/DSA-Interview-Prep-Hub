@@ -58,7 +58,7 @@ header {
     padding: 10px;
     text-align: center;
     transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
-    background-color: #4953532d;
+    background-color: #575f5f2d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
@@ -67,7 +67,7 @@ header {
 }
 
 .video-box:hover {
-    background-color: #f4f4f4;
+    background-color: #abdc97;
     transform: scale(1.05);
     border-color: #333;
 }
