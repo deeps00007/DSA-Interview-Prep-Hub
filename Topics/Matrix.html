@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../photos/M.jpg" />
+
     <title>Matrix Questions</title>
     <style>
         /* Add your CSS styles here */
@@ -54,7 +56,7 @@
 
         td a {
             text-decoration: none;
-            color: #007BFF;
+            color: #007bff;
             font-weight: bold;
         }
 
@@ -82,12 +84,11 @@
             text-align: center;
         }
 
-
         td.link-column {
             text-align: left;
         }
 
-        td.serial-column{
+        td.serial-column {
             color: #fff;
         }
 
@@ -141,24 +142,39 @@
 
         nav ul li a:hover {
             color: rgb(14, 4, 6);
-            transition: .5s;
+            transition: 0.5s;
+        }
+
+        span {
+            font-size: 80%;
+            color: #ff0000;
         }
     </style>
 </head>
 
 <body>
-    <header style="display: flex; flex-direction: row;
-    justify-content: end;">
-        <h1 style="margin-right: 40%; "><a href="../index.html" style="text-decoration: none ; cursor: pointer; color: rgb(63, 248, 248); font-size:120%;">Topics</a>/Matrix</h1>
-        <button id="musicbtn" style="border-radius: 30%; background-color: rgb(78, 135, 214);"><img src="../photos/music-1085655_1280.png" height="30px" width="40px" style="justify-content: center;"></button>
-        <button id="pausebtn" style="border-radius: 30%; background-color: rgb(48, 62, 132);"><img src="../photos/pause-303651_1280.png" height="30px" width="40px" style="justify-content: center;"></button>
+    <header style="display: flex; flex-direction: row; justify-content: end">
+        <h1 style="margin-right: 40%">
+            <a href="../index.html" style="
+            text-decoration: none;
+            cursor: pointer;
+            color: rgb(63, 248, 248);
+            font-size: 150%;
+          ">Topics</a>/Matrix
+        </h1>
+        <button id="musicbtn" style="border-radius: 30%; background-color: rgb(78, 135, 214)">
+            <img src="../photos/next.png" height="35px" width="40px" style="justify-content: center" />
+        </button>
+        <button id="pausebtn" style="border-radius: 30%; background-color: rgb(48, 62, 132)">
+            <img src="../photos/pause-303651_1280.png" height="30px" width="40px" style="justify-content: center" />
+        </button>
     </header>
 
     <table>
         <thead>
             <tr>
                 <th class="serial-column">Serial Number</th>
-                <th class="link-column"> Question Link</th>
+                <th class="link-column">Question Link</th>
                 <th class="notes-column">Solutions</th>
                 <th class="button-column">Platforms</th>
             </tr>
@@ -166,184 +182,247 @@
         <tbody>
             <tr>
                 <td class="serial-column">1</td>
-                <td class="link-column"><a
-                        href="https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0">Spiral
-                        traversal on a Matrix [Important Question]</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0">Spiral
+                        traversal on a Matrix [Important Question]</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
                     <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                        target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="#"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a href="#"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">2</td>
-                <td class="link-column"><a href="https://leetcode.com/problems/search-a-2d-matrix/">Search an element in
-                        a matriix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://leetcode.com/problems/search-a-2d-matrix/">Search an element in a matriix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
-                    <a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank"><button><img
-                                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+                    <a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank"><button>
+                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
                                 width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                                style="float: right; cursor: pointer" /></button></a>
 
                     <a
-                        href="https://www.codingninjas.com/studio/problems/search-in-a-row-wise-and-column-wise-sorted-matrix_839811?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img
-                                src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                        href="https://www.codingninjas.com/studio/problems/search-in-a-row-wise-and-column-wise-sorted-matrix_839811?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">3</td>
-                <td class="link-column"><a
-                        href="https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1">Find
-                        median in a row wise sorted matrix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1">Find
+                        median in a row wise sorted matrix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
                     <a href="https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                        target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
                     <a
-                        href="https://www.codingninjas.com/studio/problems/median-in-matrix_981178?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img
-                                src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                        href="https://www.codingninjas.com/studio/problems/median-in-matrix_981178?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">4</td>
-                <td class="link-column"><a href="https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1">Find
-                        row with maximum no. of 1's1</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1">Find row with maximum
+                        no. of 1's1</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                    <a href="https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1" target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
                     <a
-                        href="https://www.codingninjas.com/studio/problems/row-with-maximum-1-s_1112656?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img
-                                src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                        href="https://www.codingninjas.com/studio/problems/row-with-maximum-1-s_1112656?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">5</td>
-                <td class="link-column"><a href="https://practice.geeksforgeeks.org/problems/sorted-matrix/0">Print elements in sorted order using row-column wise sorted matrix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/sorted-matrix/0">Print elements in sorted order
+                        using row-column wise sorted
+                        matrix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/sorted-matrix/0"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                    <a href="https://practice.geeksforgeeks.org/problems/sorted-matrix/0" target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/sorted-matrix_758931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/sorted-matrix_758931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">6</td>
-                <td class="link-column"><a href="https://practice.geeksforgeeks.org/problems/max-rectangle/1">Maximum size rectangle</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/max-rectangle/1">Maximum size rectangle</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/max-rectangle/1"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                    <a href="https://practice.geeksforgeeks.org/problems/max-rectangle/1" target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/maximum-size-rectangle-sub-matrix-with-all-1-s_893017?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/maximum-size-rectangle-sub-matrix-with-all-1-s_893017?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">7</td>
-                <td class="link-column"><a href="https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/">Find a specific pair in matrix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/">Find a specific pair in
+                        matrix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                    <a href="https://www.geeksforgeeks.org/find-a-specific-pair-in-matrix/" target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/find-a-specific-pair-in-the-matrix_1115467?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/find-a-specific-pair-in-the-matrix_1115467?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">8</td>
-                <td class="link-column"><a href="https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/">Rotate matrix by 90 degrees</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a
+                        href="https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/">Rotate
+                        matrix by 90 degrees</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
                     <a href="https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                        target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/inplace-rotate-matrix-90-degree_839734?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/inplace-rotate-matrix-90-degree_839734?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">9</td>
-                <td class="link-column"><a href="https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1">Kth smallest element in a row-column wise sorted matrix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1">Kth smallest element
+                        in a row-column wise sorted matrix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
                     <a href="https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                        target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/kth-minimum-floor_1115470?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/kth-minimum-floor_1115470?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
             <tr>
                 <td class="serial-column">10</td>
-                <td class="link-column"><a href="https://www.geeksforgeeks.org/common-elements-in-all-rows-of-a-given-matrix/">Common elements in all rows of a given matrix</a></td>
-                <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
+                <td class="link-column">
+                    <a href="https://www.geeksforgeeks.org/common-elements-in-all-rows-of-a-given-matrix/">Common
+                        elements in all rows of a given matrix</a>
+                </td>
+                <td class="notes-column">
+                    <button onclick="window.location.href = '#';">Button 1</button>
+                </td>
                 <td class="button-column">
                     <a href="https://www.geeksforgeeks.org/common-elements-in-all-rows-of-a-given-matrix/"
-                        target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer;"></button></a>
+                        target="_blank"><button>
+                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
+                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/common-elements-present-in-all-rows-of-a-matrix_1118111?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a>
-                    <button onclick="window.location.href = '#';"><img
-                            src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
+                    <a
+                        href="https://www.codingninjas.com/studio/problems/common-elements-present-in-all-rows-of-a-matrix_1118111?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
+                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
+                                alt="icon" style="float: right; cursor: pointer" /></button></a>
+                    <button onclick="window.location.href = '#';">
+                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
+                            height="25px" alt="icon" style="float: right; cursor: pointer" />
+                    </button>
                 </td>
             </tr>
 
@@ -352,11 +431,14 @@
     </table>
 
     <footer>
-
         <nav>
             <ul>
-                <li><a href="../about,conatct_pages/about.html" target="_blank">About</a></li>
-                <li><a href="../about,conatct_pages/contacts.html" target="_blank">Contact</a></li>
+                <li>
+                    <a href="../about,conatct_pages/about.html" target="_blank">About</a>
+                </li>
+                <li>
+                    <a href="../about,conatct_pages/contacts.html" target="_blank">Contact</a>
+                </li>
                 <!-- <li><a href="/contacts.html" target="_blank">Contact</a></li>
                 <li><a href="/contacts.html" target="_blank">Contact</a></li> -->
             </ul>
@@ -380,9 +462,15 @@
     const btn = document.getElementById("musicbtn");
     btn.addEventListener("click", () => {
         // Add songs to the queue
-        songQueue.push("Superfast Breathless Hanuman Chalisa Shankar Mahadevan Hanuman Chalisa New Version हनमन चलस [TubeRipper.com].mp3");
-        songQueue.push("Samay Samjhayega Full Song Tum Prem Ho Sad Radha Krishn LOFI MOhit lalwani Surya Raj Kamal [TubeRipper.com].mp3");
-        songQueue.push("rain-and-tears-sad-piano-music-with-rain-and-thunderstorm-7804.mp3");
+        songQueue.push(
+            "Superfast Breathless Hanuman Chalisa Shankar Mahadevan Hanuman Chalisa New Version हनमन चलस [TubeRipper.com].mp3"
+        );
+        songQueue.push(
+            "Samay Samjhayega Full Song Tum Prem Ho Sad Radha Krishn LOFI MOhit lalwani Surya Raj Kamal [TubeRipper.com].mp3"
+        );
+        songQueue.push(
+            "rain-and-tears-sad-piano-music-with-rain-and-thunderstorm-7804.mp3"
+        );
         songQueue.push("in-the-room-when-the-rain-pouring-117209.mp3");
         // Start playing songs from the queue
         playNextSong();

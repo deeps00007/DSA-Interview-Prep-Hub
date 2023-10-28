@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="./style3.css">
     <!-- whatsapp -->
-	<script type="text/javascript" src="../Whatsapp/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../Whatsapp/floating-wpp.min.js"></script>
-	<script src="https://kit.fontawesome.com/d7fa63af17.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="../Whatsapp/floating-wpp.min.css">
+    <script type="text/javascript" src="../Whatsapp/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../Whatsapp/floating-wpp.min.js"></script>
+    <script src="https://kit.fontawesome.com/d7fa63af17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Whatsapp/floating-wpp.min.css">
 </head>
+
 <body>
     <header>
         <h1>Contact Us</h1>
     </header>
-    
+
     <main>
         <section>
-            <h2>Contact Information</h2>
-            <p>You can reach me at Deepanshusingh036@gmail.com</p>
+            <h2 style="color: aliceblue;">Information</h2>
+            <!-- <h2>Project by Deepanshu singh</h2> -->
+            <p>You can reach me at<span> +91 8368804883</span></p>
+            <p>You can reach me at<span> deepanshusingh036@gmail.com</span></p>
+            
+            <h2 style="color: aliceblue;">Connect on Social media</h2>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/profile.php?id=100011238398596" target="_blank"><ion-icon
+                            name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://github.com/deeps00007 
+                    " target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/deepanshu-singh-899390296/
+                    " target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/ig_deeps/" target="_blank"><ion-icon
+                            name="logo-instagram"></ion-icon></a></li>
+            </ul>
         </section>
         <!-- Add more content as needed -->
     </main>
@@ -28,17 +44,20 @@
 
         <!-- whatsapp -->
         <div id="myDiv"></div>
-    <script type="text/javascript">
-        $(function () {
-            $('#myDiv').floatingWhatsApp({
-                phone: '+918368804883',
-                showPopup: 'true',
-                popupMessage: "Hello sir ",
-                HeaderTitle: "Whatsapp Chat",
-                position: 'right',
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('#myDiv').floatingWhatsApp({
+                    phone: '+918368804883',
+                    showPopup: 'true',
+                    popupMessage: "Hello sir ",
+                    HeaderTitle: "Whatsapp Chat",
+                    position: 'right',
+                });
             });
-        });
-    </script>
+        </script>
     </footer>
 </body>
+
 </html>

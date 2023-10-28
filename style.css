@@ -19,7 +19,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
-
+    
 }
 
 /* Style the header image */
@@ -30,7 +30,7 @@ header {
 }
 .header-image  img{
     border-radius: 30px;
-    border: 3px solid red;
+    border: 3px solid rgb(228, 219, 219);
 }
 
 
@@ -47,7 +47,7 @@ header {
     padding: 20px;
 }
 .video-container,.video-box{
-    color: #fb2e2e;
+    color: #fcfbfb;
 }
 /* Style the video boxes */
 .video-box {
@@ -67,10 +67,11 @@ header {
 }
 
 .video-box:hover {
-    background-color: #abdc97;
+    background-color: #2df4d3a3;
     transform: scale(1.05);
     border-color: #333;
 }
+
 
 /* Style the footer */
 footer {
