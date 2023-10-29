@@ -13,7 +13,6 @@ body{
     
 }
 
-/* Apply some basic styling to the header */
 header {
     background-color: #fb2e2e;
     color: #fff;
@@ -22,7 +21,6 @@ header {
     
 }
 
-/* Style the header image */
 .header-image {
     text-align: center;
     margin: 10px 5px;
@@ -33,13 +31,11 @@ header {
     border: 3px solid rgb(228, 219, 219);
 }
 
-
 .header-image img {
     max-width: 100%;
     height: auto;
 }
 
-/* Style the video container */
 .video-container {
     display: flex;
     justify-content: space-around;
@@ -49,11 +45,11 @@ header {
 .video-container,.video-box{
     color: #fcfbfb;
 }
-/* Style the video boxes */
+
 .video-box {
     width: 300px;
     height: 150px;
-    /* border: 1px solid #ccc; */
+    border: 1px solid #ccc;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -62,6 +58,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
+
 .video-box p{
     margin-top: 20px;
 }
@@ -70,10 +67,10 @@ header {
     background-color: #2df4d3a3;
     transform: scale(1.05);
     border-color: #333;
+    border: 1.5px solid #fa0000;
+
 }
 
-
-/* Style the footer */
 footer {
     background-color: #fb2e2e;
     color: #fff;

@@ -2,13 +2,13 @@
 <html>
 <head>
     <link rel="icon" href="../photos/coming_soon.jpg">
-    <title>Coming Soon</title>
+    <title>coming soon</title>
     <style>
-        /* Set the video as a background */
         body {
             margin: 0;
             padding: 0;
             overflow: hidden;
+            position: relative;
         }
 
         video {
@@ -20,13 +20,46 @@
             object-fit: cover;
             z-index: -1;
         }
+        .music-control {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+            cursor: pointer;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <video autoplay loop muted>
         <source src="../video/Coming soon Glitch video effects.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
 
-   
+    
+
+    <div class="music-control" id="music-control">
+        🔇 Sound Off
+    </div>
+
+    <script>
+        var video = document.querySelector("video");
+        var musicControl = document.getElementById("music-control");
+        var isMuted = true;
+
+        musicControl.addEventListener("click", toggleMute);
+
+        function toggleMute() {
+            if (isMuted) {
+                video.muted = false;
+                musicControl.innerHTML = "🔊 Sound On";
+                isMuted = false;
+            } else {
+                video.muted = true;
+                musicControl.innerHTML = "🔇 Sound Off";
+                isMuted = true;
+            }
+        }
+    </script>
 </body>
 </html>
