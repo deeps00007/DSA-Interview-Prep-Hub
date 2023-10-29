@@ -36,10 +36,13 @@
         Your browser does not support the video tag.
     </video>
 
+    <div>
+        <marquee style="color: rgb(248, 10, 66); font-size:20px; cursor: pointer;">Hello,World!___________"An Incredible Question Will Drop Here Soon..."_________ </marquee>
+    </div>
     
 
-    <div class="music-control" id="music-control">
-        🔇 Sound Off
+    <div class="music-control" id="music-control" style="top: 50px;">
+        🔇 Turn on
     </div>
 
     <script>
@@ -52,11 +55,11 @@
         function toggleMute() {
             if (isMuted) {
                 video.muted = false;
-                musicControl.innerHTML = "🔊 Sound On";
+                musicControl.innerHTML = "🔊 😱";
                 isMuted = false;
             } else {
                 video.muted = true;
-                musicControl.innerHTML = "🔇 Sound Off";
+                musicControl.innerHTML = "🔇 😖";
                 isMuted = true;
             }
         }
