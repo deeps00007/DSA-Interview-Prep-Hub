@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="icon" href="../photos/coming_soon.jpg">
+    <link rel="icon" href="../photos/coming_soon.jpg" />
     <title>Coming Soon</title>
     <style>
         body {
@@ -20,6 +21,7 @@
             object-fit: cover;
             z-index: -1;
         }
+
         .music-control {
             position: absolute;
             top: 20px;
@@ -28,19 +30,49 @@
             cursor: pointer;
             color: white;
         }
+
+        @keyframes colorChange {
+            0% {
+                color: rgb(248, 10, 66);
+            }
+
+            25% {
+                color: rgb(10, 248, 66);
+            }
+
+            50% {
+                color: rgb(66, 10, 248);
+            }
+
+            75% {
+                color: rgb(248, 66, 10);
+            }
+
+            100% {
+                color: rgb(10, 66, 248);
+            }
+        }
+
+        /* Apply animation to the marquee element */
+        marquee {
+            animation: colorChange 8s linear infinite;
+            transition: color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     </style>
 </head>
+
 <body>
     <video autoplay loop muted>
-        <source src="../video/Coming soon Glitch video effects.mp4" type="video/mp4">
+        <source src="../video/Coming soon Glitch video effects.mp4" type="video/mp4" />
     </video>
 
     <div>
-        <marquee direction="left" scrollamount="10" style="color: rgb(248, 10, 66); font-size:20px; cursor: pointer;">Hello,World!___________"An Incredible Question Will Drop Here Soon..."_________ </marquee>
+        <marquee direction="left" scrollamount="10" style="font-size: 20px; cursor: pointer">Hello,World!___________"An
+            Incredible Question Will Drop Here
+            Soon..."_________
+        </marquee>
     </div>
-    
 
-    <div class="music-control" id="music-control" style="top: 50px;">
+    <div class="music-control" id="music-control" style="top: 50px">
         🔇 Turn on
     </div>
 
@@ -64,4 +96,5 @@
         }
     </script>
 </body>
+
 </html>
