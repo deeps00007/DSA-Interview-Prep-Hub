@@ -1,184 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../photos/S.jpg" />
     <title>String Questions</title>
     <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url(../photos/gray\ background.jpg);
-            background-position: center;
-            background-size: cover;
-        }
+      /* Add your CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(../photos/gray\ background.jpg);
+        background-position: center;
+        background-size: cover;
+      }
 
-        header {
-            background-color: #ff0000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+      header {
+        background-color: #ff0000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
 
-        h1 {
-            font-size: 24px;
-            margin: 0;
-        }
+      h1 {
+        font-size: 24px;
+        margin: 0;
+      }
 
-        table {
-            width: 90%;
-            /* Increased table width to 90% */
-            max-width: 1250px;
-            /* Increased the max-width of the table */
-            margin: 20px auto;
-            /* background-color: #0a0a0a; */
-            background-color: transparent;
-            border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      table {
+        width: 90%;
+        /* Increased table width to 90% */
+        max-width: 1250px;
+        /* Increased the max-width of the table */
+        margin: 20px auto;
+        /* background-color: #0a0a0a; */
+        background-color: transparent;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 15px;
-            text-align: left;
-        }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+      }
 
-        th {
-            background-color: #333;
-            color: #fff;
-        }
+      th {
+        background-color: #333;
+        color: #fff;
+      }
 
-        td a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
+      td a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
 
-        td a:hover {
-            color: #0056b3;
-        }
+      td a:hover {
+        color: #0056b3;
+      }
 
-        th.serial-column {
-            width: 10%;
-            text-align: center;
-        }
+      th.serial-column {
+        width: 10%;
+        text-align: center;
+      }
 
-        th.link-column {
-            width: 55%;
-            /* Adjusted width of the "Link" column */
-        }
+      th.link-column {
+        width: 55%;
+        /* Adjusted width of the "Link" column */
+      }
 
-        th.notes-column {
-            width: 5%;
-            /* Added a new "Notes" column and set its width */
-        }
+      th.notes-column {
+        width: 5%;
+        /* Added a new "Notes" column and set its width */
+      }
 
-        th.button-column {
-            width: 20%;
-            text-align: center;
-        }
+      th.button-column {
+        width: 20%;
+        text-align: center;
+      }
 
-        td.link-column {
-            text-align: left;
-        }
+      td.link-column {
+        text-align: left;
+      }
 
-        td.serial-column {
-            color: #fff;
-        }
+      td.serial-column {
+        color: #fff;
+      }
 
-        td.serial-column,
-        td.notes-column,
-        td.button-column {
-            text-align: center;
-        }
+      td.serial-column,
+      td.notes-column,
+      td.button-column {
+        text-align: center;
+      }
 
-        td button {
-            background-color: #060606;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 12px;
-        }
+      td button {
+        background-color: #060606;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+      }
 
-        td button:hover {
-            background-color: #0056b3;
-        }
+      td button:hover {
+        background-color: #0056b3;
+      }
 
-        footer {
-            background-color: #ff0000;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
+      footer {
+        background-color: #ff0000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
 
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* padding: 45px 0% 8% 8%; */
-        }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 45px 0% 8% 8%; */
+      }
 
-        nav ul li {
-            list-style-type: none;
-            display: inline;
-            flex-direction: row;
-            padding: 7px 25px;
-        }
+      nav ul li {
+        list-style-type: none;
+        display: inline;
+        flex-direction: row;
+        padding: 7px 25px;
+      }
 
-        nav ul li a {
-            color: whitesmoke;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 19px;
-        }
+      nav ul li a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 19px;
+      }
 
-        nav ul li a:hover {
-            color: rgb(14, 4, 6);
-            transition: 0.5s;
-        }
-        span {
-            font-size: 80%;
-            color: #ff0000;
-        }
+      nav ul li a:hover {
+        color: rgb(14, 4, 6);
+        transition: 0.5s;
+      }
+      span {
+        font-size: 80%;
+        color: #ff0000;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header style="display: flex; flex-direction: row; justify-content: end">
-        <h1 style="margin-right: 40%">
-            <a href="../index.html" style="
+      <h1 style="margin-right: 40%">
+        <a
+          href="../index.html"
+          style="
             text-decoration: none;
             cursor: pointer;
             color: rgb(63, 248, 248);
             font-size: 150%;
-          ">Topics</a>/String
-        </h1>
-        <button id="musicbtn" style="border-radius: 30%; background-color: rgb(78, 135, 214)">
-            <img src="../photos/next.png" height="35px" width="40px" style="justify-content: center" />
-        </button>
-        <button id="pausebtn" style="border-radius: 30%; background-color: rgb(48, 62, 132)">
-            <img src="../photos/pause-303651_1280.png" height="30px" width="40px" style="justify-content: center" />
-        </button>
+          "
+          >Topics</a
+        >/String
+      </h1>
+      <button
+        id="musicbtn"
+        style="border-radius: 30%; background-color: rgb(78, 135, 214)"
+      >
+        <img
+          src="../photos/next.png"
+          height="35px"
+          width="40px"
+          style="justify-content: center"
+        />
+      </button>
+      <button
+        id="pausebtn"
+        style="border-radius: 30%; background-color: rgb(48, 62, 132)"
+      >
+        <img
+          src="../photos/pause-303651_1280.png"
+          height="30px"
+          width="40px"
+          style="justify-content: center"
+        />
+      </button>
     </header>
 
     <table>
-        <thead>
-            <tr>
-                <th class="serial-column">Serial Number</th>
-                <th class="link-column">Question Link</th>
-                <th class="notes-column">Solutions</th>
-                <th class="button-column">Platforms</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr>
+      <thead>
+        <tr>
+          <th class="serial-column">Serial Number</th>
+          <th class="link-column">Question Link</th>
+          <th class="notes-column">Solutions</th>
+          <th class="button-column">Platforms</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
                 <td class="serial-column">1</td>
                 <td class="link-column"><a href="#">Link 1</a></td>
                 <td class="notes-column"><button onclick="window.location.href = '#';">Button 1</button></td>
@@ -195,1150 +214,2136 @@
                             height="25px" alt="icon" style="float: right; cursor: pointer;"></button>
                 </td>
             </tr> -->
-            <tr>
-                <td class="serial-column">1</td>
-                <td class="link-column">
-                    <a href="https://leetcode.com/problems/reverse-string/">Reverse a String</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://leetcode.com/problems/reverse-string/" target="_blank"><button>
-                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">1</td>
+          <td class="link-column">
+            <a href="https://leetcode.com/problems/reverse-string/"
+              >Reverse a String</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://leetcode.com/problems/reverse-string/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/string-reverse_3210207?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">2</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/palindrome-string0817/1">
-                        Check whether a String is Palindrome or not</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/palindrome-string0817/1"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/string-reverse_3210207?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">2</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/palindrome-string0817/1"
+            >
+              Check whether a String is Palindrome or not</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/palindrome-string0817/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">3</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/">
-                        Find Duplicate characters in a string</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">3</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/"
+            >
+              Find Duplicate characters in a string</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/print-all-the-duplicates-in-the-input-string/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/duplicate-characters_3189116?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">4</td>
-                <td class="link-column">
-                    <a href="https://www.baeldung.com/java-string-immutable">Why strings are immutable in Java?</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <!-- <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems"
+            <a
+              href="https://www.codingninjas.com/studio/problems/duplicate-characters_3189116?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">4</td>
+          <td class="link-column">
+            <a href="https://www.baeldung.com/java-string-immutable"
+              >Why strings are immutable in Java?</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <!-- <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems"
                         target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
                                 width="30px" height="25px" alt="icon"
                                 style="float: right; cursor: pointer;"></button></a> -->
 
-                    <a href="https://www.baeldung.com/java-string-immutable" target="_blank"><button>
-                            <img src="https://www.baeldung.com/wp-content/themes/baeldung/icon/logo.svg" width="145px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <!-- <button onclick="window.location.href = '#';"><img
+            <a
+              href="https://www.baeldung.com/java-string-immutable"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://www.baeldung.com/wp-content/themes/baeldung/icon/logo.svg"
+                  width="145px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <!-- <button onclick="window.location.href = '#';"><img
                             src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
                             height="25px" alt="icon" style="float: right; cursor: pointer;"></button> -->
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">5</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/">Write
-                        a Code to check whether one string is a rotation of
-                        another</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">5</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/"
+              >Write a Code to check whether one string is a rotation of
+              another</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/check-if-one-string-is-a-rotation-of-another-string_1115683?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">6</td>
-                <td class="link-column">
-                    <a href="https://www.codingninjas.com/studio/problems/shuffle-two-strings_1115692?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank">Write a Program to check whether a string is a valid shuffle of
-                        two strings or not</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <!-- <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems"
+            <a
+              href="https://www.codingninjas.com/studio/problems/check-if-one-string-is-a-rotation-of-another-string_1115683?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">6</td>
+          <td class="link-column">
+            <a
+              href="https://www.codingninjas.com/studio/problems/shuffle-two-strings_1115692?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              >Write a Program to check whether a string is a valid shuffle of
+              two strings or not</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <!-- <a href="https://www.codingninjas.com/studio/problems/reverse-the-array_1262298?topList=love-babbar-dsa-sheet-problems"
                         target="_blank"><button><img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
                                 width="30px" height="25px" alt="icon"
                                 style="float: right; cursor: pointer;"></button></a> -->
 
-                    <a href="https://www.codingninjas.com/studio/problems/shuffle-two-strings_1115692?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">7</td>
-                <td class="link-column">
-                    <a href="https://leetcode.com/problems/count-and-say/">Count and Say problem <span> (leetcode)*</span></a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://leetcode.com/problems/count-and-say/" target="_blank"><button>
-                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/shuffle-two-strings_1115692?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">7</td>
+          <td class="link-column">
+            <a href="https://leetcode.com/problems/count-and-say/"
+              >Count and Say problem <span> (leetcode)*</span></a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://leetcode.com/problems/count-and-say/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/write-as-you-speak_1090543?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">8</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0">Write a
-                        program to find the longest Palindrome in a string.[
-                        Longest palindromic Substring]</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/write-as-you-speak_1090543?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">8</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0"
+              >Write a program to find the longest Palindrome in a string.[
+              Longest palindromic Substring]</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/longest-palindromic-substring_758900?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">9</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence/0">Find Longest
-                        Recurring Subsequence in String</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/longest-palindromic-substring_758900?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">9</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence/0"
+              >Find Longest Recurring Subsequence in String</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/longest-repeating-subsequence_1062697?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/longest-repeating-subsequence_1062697?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
 
-            <tr>
-                <td class="serial-column">10</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/print-subsequences-string/">Print all Subsequences of a
-                        string.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/print-subsequences-string/" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">10</td>
+          <td class="link-column">
+            <a href="https://www.geeksforgeeks.org/print-subsequences-string/"
+              >Print all Subsequences of a string.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/print-subsequences-string/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a
-                        href="https://www.codingninjas.com/studio/problems/subsequences-of-string_985087?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/subsequences-of-string_985087?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
 
-            <tr>
-                <td class="serial-column">11</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0">Print all the
-                        permutations of the given stringPrint all the
-                        permutations of the given string</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">11</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0"
+              >Print all the permutations of the given stringPrint all the
+              permutations of the given string</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/print-permutations-string_758958?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/print-permutations-string_758958?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
 
-            <tr>
-                <td class="serial-column">12</td>
-                <td class="link-column">
-                    <a
-                        href="https://practice.geeksforgeeks.org/problems/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/1">Split
-                        the Binary string into two substring with equal 0's and
-                        1's</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/1"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">12</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/1"
+              >Split the Binary string into two substring with equal 0's and
+              1's</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/sort-array-of-0s-and-1s_2656186?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/sort-array-of-0s-and-1s_2656186?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
 
-            <tr>
-                <td class="serial-column">13</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/word-wrap/0">Word Wrap Problem [VERY IMP].</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/word-wrap/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">13</td>
+          <td class="link-column">
+            <a href="https://practice.geeksforgeeks.org/problems/word-wrap/0"
+              >Word Wrap Problem [VERY IMP].</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/word-wrap/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <!-- <a href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker" target="_blank"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
+            <!-- <a href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker" target="_blank"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
                                 height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a> -->
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">14</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/edit-distance3702/1">
-                        EDIT Distance [Very Imp].</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/edit-distance3702/1" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">14</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/edit-distance3702/1"
+            >
+              EDIT Distance [Very Imp].</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/edit-distance3702/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <!-- <a href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker" target="_blank"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
+            <!-- <a href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker" target="_blank"><button><img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px"
                                 height="25px" alt="icon" style="float: right; cursor: pointer;"></button></a> -->
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">15</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/next-permutation/0">Find next greater number
-                        with same set of digits. [Very Very
-                        IMP]</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/word-wrap/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">15</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/next-permutation/0"
+              >Find next greater number with same set of digits. [Very Very
+              IMP]</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/word-wrap/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">16</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/parenthesis-checker/0">Balanced Parenthesis
-                        problem.[Imp]</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/parenthesis-checker/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/word-wrap_982931?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">16</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/parenthesis-checker/0"
+              >Balanced Parenthesis problem.[Imp]</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/parenthesis-checker/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/valid-parenthesis_795104?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">17</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/word-break/0">Word break Problem[ Very Imp]</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/word-break/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/valid-parenthesis_795104?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">17</td>
+          <td class="link-column">
+            <a href="https://practice.geeksforgeeks.org/problems/word-break/0"
+              >Word break Problem[ Very Imp]</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/word-break/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/word-break-1_758963?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">18</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/">
-                        Rabin Karp Algo</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/word-break-1_758963?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">18</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/"
+            >
+              Rabin Karp Algo</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/stringmatch-rabincarp_1115738?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">19</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1">KMP Algo</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/stringmatch-rabincarp_1115738?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">19</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
+              >KMP Algo</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/find-pattern-in-string_1112621?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">20</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/">Convert
-                        a Sentence into its equivalent mobile numeric keypad
-                        sequence.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/find-pattern-in-string_1112621?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">20</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
+              >Convert a Sentence into its equivalent mobile numeric keypad
+              sequence.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">21</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/count-the-reversals/0">Minimum number of
-                        bracket reversals needed to make an expression
-                        balanced.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/count-the-reversals/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">21</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/count-the-reversals/0"
+              >Minimum number of bracket reversals needed to make an expression
+              balanced.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/count-the-reversals/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/minimum-cost-to-make-string-valid_1115770?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">22</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1">Count All
-                        Palindromic Subsequence in a given String.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/minimum-cost-to-make-string-valid_1115770?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">22</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1"
+              >Count All Palindromic Subsequence in a given String.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/count-palindrome-words-in-a-sentence_975378?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">23</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/find-count-number-given-string-present-2d-character-array/">Count
-                        of number of given string in 2D character array</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/count-palindrome-words-in-a-sentence_975378?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">23</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/find-count-number-given-string-present-2d-character-array/"
+              >Count of number of given string in 2D character array</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/count-strings_1118116?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">24</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/find-the-string-in-grid/0">CSearch a Word in a
-                        2D Grid of characters.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/find-the-string-in-grid/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/count-strings_1118116?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">24</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/find-the-string-in-grid/0"
+              >CSearch a Word in a 2D Grid of characters.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/find-the-string-in-grid/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/word-search_630520?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">25</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/">
-                        Boyer Moore Algorithm for Pattern Searching.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" />
-                        </button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/word-search_630520?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">25</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/"
+            >
+              Boyer Moore Algorithm for Pattern Searching.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/boyer-moore-algorithm-for-pattern-searching_1115634?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">26</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0">Converting Roman
-                        Numerals to Decimal</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/boyer-moore-algorithm-for-pattern-searching_1115634?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">26</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0"
+              >Converting Roman Numerals to Decimal</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">27</td>
-                <td class="link-column">
-                    <a href="https://leetcode.com/problems/longest-common-prefix/">Longest Common Prefix <span>(leetcode)*</span></a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank"><button>
-                            <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
-                                width="30px" height="25px" alt="icon"
-                                style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">27</td>
+          <td class="link-column">
+            <a href="https://leetcode.com/problems/longest-common-prefix/"
+              >Longest Common Prefix <span>(leetcode)*</span></a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://leetcode.com/problems/longest-common-prefix/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/longest-common-prefix_2090383?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">28</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/min-number-of-flips/0">Number of flips to make
-                        binary string alternate</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/min-number-of-flips/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/longest-common-prefix_2090383?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">28</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/min-number-of-flips/0"
+              >Number of flips to make binary string alternate</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/min-number-of-flips/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">29</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/find-first-repeated-word-string/">
-                        Find the first repeated word in string.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/find-first-repeated-word-string/" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/convert-sentence_1115490?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">29</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/find-first-repeated-word-string/"
+            >
+              Find the first repeated word in string.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/find-first-repeated-word-string/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/second-most-repeated-word_3210218?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">30</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing/0">
-                        Minimum number of swaps for bracket balancing.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/second-most-repeated-word_3210218?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">30</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing/0"
+            >
+              Minimum number of swaps for bracket balancing.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/minimum-swaps-for-bracket-balancing/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/minimum-number-of-swaps-for-bracket-balancing_1115682?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">31</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0">
-                        Find the longest common subsequence between two strings.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/minimum-number-of-swaps-for-bracket-balancing_1115682?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">31</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
+            >
+              Find the longest common subsequence between two strings.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/longest-common-subsequence_1063255?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">32</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/">
-                        Program to generate all possible valid IP addresses from given string.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/longest-common-subsequence_1063255?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">32</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/"
+            >
+              Program to generate all possible valid IP addresses from given
+              string.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/ip-address_992846?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">33</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0">
-                        Write a program to find the smallest window that contains all characters of string itself.</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/ip-address_992846?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">33</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
+            >
+              Write a program to find the smallest window that contains all
+              characters of string itself.</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/shortest-substring-with-all-characters_704894?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">34</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/rearrange-characters4649/1">
-                        Rearrange characters in a string such that no two adjacent are same</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/rearrange-characters4649/1"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/shortest-substring-with-all-characters_704894?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">34</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/rearrange-characters4649/1"
+            >
+              Rearrange characters in a string such that no two adjacent are
+              same</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/rearrange-characters4649/1"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/rearrange-string_982765?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatrackerr"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">35</td>
-                <td class="link-column">
-                    <a href="https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/">
-                        Minimum characters to be added at front to make string palindrome</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/rearrange-string_982765?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatrackerr"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">35</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/"
+            >
+              Minimum characters to be added at front to make string
+              palindrome</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/minimum-characters-for-palindrome_893000?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">36</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/k-anagrams-1/0">
-                        Given a sequence of words, print all anagrams together</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/minimum-characters-for-palindrome_893000?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">36</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/k-anagrams-1/0"
+            >
+              Given a sequence of words, print all anagrams together</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/group-anagrams-together_985354?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td class="serial-column">37</td>
-                <td class="link-column">
-                    <a
-                        href="https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0">
-                        Find the smallest window in a string containing all characters of another string</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/group-anagrams-together_985354?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="serial-column">37</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0"
+            >
+              Find the smallest window in a string containing all characters of
+              another string</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/smallest-window-in-string-containing-all-the-characters-of-another-string_981175?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/smallest-window-in-string-containing-all-the-characters-of-another-string_981175?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
 
-            <tr>
-                <td class="serial-column">38</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/consecutive-elements/0">
-                        Recursively remove all adjacent duplicates</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/consecutive-elements/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">38</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/consecutive-elements/0"
+            >
+              Recursively remove all adjacent duplicates</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/consecutive-elements/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/remove-consecutive-duplicates_893195?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/remove-consecutive-duplicates_893195?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr></tr>
 
+        <tr>
+          <td class="serial-column">39</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0"
+            >
+              String matching where one string contains wildcard characters</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-            <tr>
-                <td class="serial-column">39</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0">
-                        String matching where one string contains wildcard characters</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+            <a
+              href="https://www.codingninjas.com/studio/problems/wildcard-pattern-matching_701650?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr></tr>
 
-                    <a href="https://www.codingninjas.com/studio/problems/wildcard-pattern-matching_701650?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
+        <tr>
+          <td class="serial-column">40</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/function-to-find-number-of-customers-who-could-not-get-a-computer/"
+            >
+              Function to find Number of customers who could not get a
+              computer</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
+            <a
+              href="https://www.codingninjas.com/studio/problems/count-customers-who-did-not-get-a-computer_1115775?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr></tr>
 
-            <tr>
-                <td class="serial-column">40</td>
-                <td class="link-column">
-                    <a
-                        href="https://www.geeksforgeeks.org/function-to-find-number-of-customers-who-could-not-get-a-computer/">
-                        Function to find Number of customers who could not get a computer</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">41</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/"
+            >
+              Transform One String to Another using Minimum Number of Given
+              Operation</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/count-customers-who-did-not-get-a-computer_1115775?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/minimum-shift-operations_1115784?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr></tr>
 
-            <tr>
-                <td class="serial-column">41</td>
-                <td class="link-column">
-                    <a
-                        href="https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/">
-                        Transform One String to Another using Minimum Number of Given Operation</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
+        <tr>
+          <td class="serial-column">42</td>
+          <td class="link-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/isomorphic-strings/0"
+            >
+              Check if two given strings are isomorphic to each other</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://practice.geeksforgeeks.org/problems/isomorphic-strings/0"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-                    <a href="https://www.codingninjas.com/studio/problems/minimum-shift-operations_1115784?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
+            <a
+              href="https://www.codingninjas.com/studio/problems/check-if-two-given-strings-are-isomorphic-to-each-other_1117636?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td class="serial-column">43</td>
+          <td class="link-column">
+            <a
+              href="https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/"
+            >
+              Recursively print all sentences that can be formed from list of
+              word lists</a
+            >
+          </td>
+          <td class="notes-column">
+            <button onclick="window.location.href = '#';">Button 1</button>
+          </td>
+          <td class="button-column">
+            <a
+              href="https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
 
-            <tr>
-                <td class="serial-column">42</td>
-                <td class="link-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/isomorphic-strings/0">
-                        Check if two given strings are isomorphic to each other</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://practice.geeksforgeeks.org/problems/isomorphic-strings/0" target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
-
-                    <a href="https://www.codingninjas.com/studio/problems/check-if-two-given-strings-are-isomorphic-to-each-other_1117636?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-            <tr>
-                <td class="serial-column">43</td>
-                <td class="link-column">
-                    <a
-                        href="https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/">
-                        Recursively print all sentences that can be formed from list of word lists</a>
-                </td>
-                <td class="notes-column">
-                    <button onclick="window.location.href = '#';">Button 1</button>
-                </td>
-                <td class="button-column">
-                    <a href="https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/"
-                        target="_blank"><button>
-                            <img src="https://img.icons8.com/color/24/000000/GeeksforGeeks.png" width="30px"
-                                height="25px" alt="icon" style="float: right; cursor: pointer" /></button></a>
-
-                    <a href="https://www.codingninjas.com/studio/problems/ninja-and-sentences_1123512?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
-                        target="_blank"><button>
-                            <img src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg" width="30px" height="25px"
-                                alt="icon" style="float: right; cursor: pointer" /></button></a>
-                    <button onclick="window.location.href = '#';">
-                        <img src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png" width="65px"
-                            height="25px" alt="icon" style="float: right; cursor: pointer" />
-                    </button>
-                </td>
-            </tr>
-            <tr>
-
-                <!-- Add more rows for additional data -->
-        </tbody>
+            <a
+              href="https://www.codingninjas.com/studio/problems/ninja-and-sentences_1123512?topList=love-babbar-dsa-sheet-problems&utm_source=website&utm_medium=affiliate&utm_campaign=450dsatracker"
+              target="_blank"
+              ><button>
+                <img
+                  src="https://i.ibb.co/RcQ5qLs/Coding-Ninjas-logo.jpg"
+                  width="30px"
+                  height="25px"
+                  alt="icon"
+                  style="float: right; cursor: pointer"
+                /></button
+            ></a>
+            <button onclick="window.location.href = '#';">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:875/1*9HS_YzkoZQMXTw2rlRk7Ug.png"
+                width="65px"
+                height="25px"
+                alt="icon"
+                style="float: right; cursor: pointer"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <!-- Add more rows for additional data -->
+        </tr>
+      </tbody>
     </table>
 
     <footer>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../about,conatct_pages/about.html" target="_blank">About</a>
-                </li>
-                <li>
-                    <a href="../about,conatct_pages/contacts.html" target="_blank">Contact</a>
-                </li>
-                <!-- <li><a href="/contacts.html" target="_blank">Contact</a></li>
+      <nav>
+        <ul>
+          <li>
+            <a href="../about,conatct_pages/about.html" target="_blank"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="../about,conatct_pages/contacts.html" target="_blank"
+              >Contact</a
+            >
+          </li>
+          <!-- <li><a href="/contacts.html" target="_blank">Contact</a></li>
                 <li><a href="/contacts.html" target="_blank">Contact</a></li> -->
-            </ul>
-        </nav>
-        &copy; DSA_interview_prep_HUB
+        </ul>
+      </nav>
+      &copy; DSA_interview_prep_HUB
     </footer>
-</body>
-<script>
+  </body>
+  <script>
     const audio = new Audio();
     let songQueue = []; // Array to store song URLs
     let currentSongIndex = 0; // Index of the currently playing song
 
     function playNextSong() {
-        if (currentSongIndex < songQueue.length) {
-            audio.src = songQueue[currentSongIndex];
-            audio.play();
-            currentSongIndex++;
-        }
+      if (currentSongIndex < songQueue.length) {
+        audio.src = songQueue[currentSongIndex];
+        audio.play();
+        currentSongIndex++;
+      }
     }
 
     const btn = document.getElementById("musicbtn");
     btn.addEventListener("click", () => {
-        // Add songs to the queue
+      // Add songs to the queue
 
-        songQueue.push(
-            "Superfast Breathless Hanuman Chalisa Shankar Mahadevan Hanuman Chalisa New Version हनमन चलस [TubeRipper.com].mp3"
-        );
-        songQueue.push(
-            "Samay Samjhayega Full Song Tum Prem Ho Sad Radha Krishn LOFI MOhit lalwani Surya Raj Kamal [TubeRipper.com].mp3"
-        );
-        songQueue.push(
-            "rain-and-tears-sad-piano-music-with-rain-and-thunderstorm-7804.mp3"
-        );
-        songQueue.push("in-the-room-when-the-rain-pouring-117209.mp3");
-        // Start playing songs from the queue
-        playNextSong();
+      songQueue.push(
+        "Superfast Breathless Hanuman Chalisa Shankar Mahadevan Hanuman Chalisa New Version हनमन चलस [TubeRipper.com].mp3"
+      );
+      songQueue.push(
+        "Samay Samjhayega Full Song Tum Prem Ho Sad Radha Krishn LOFI MOhit lalwani Surya Raj Kamal [TubeRipper.com].mp3"
+      );
+      songQueue.push(
+        "rain-and-tears-sad-piano-music-with-rain-and-thunderstorm-7804.mp3"
+      );
+      songQueue.push("in-the-room-when-the-rain-pouring-117209.mp3");
+      // Start playing songs from the queue
+      playNextSong();
     });
 
     const stopmusin = document.getElementById("pausebtn");
     stopmusin.addEventListener("click", () => {
-        audio.pause();
+      audio.pause();
     });
 
     // Event listener for when a song ends
     audio.addEventListener("ended", () => {
-        playNextSong();
+      playNextSong();
     });
-</script>
-
+  </script>
 </html>
