@@ -31,6 +31,48 @@ header {
     max-width: 100%;
     height: auto;
 } */
+.links{
+    color: #fa0000;
+    text-align: center;
+    font-size: large;
+}
+
+
+
+.center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider-container {
+    width: 900px;
+    overflow: hidden;
+  }
+  
+  .slider {
+    text-align: center;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 900px; /* Should match slider-container width */
+
+  }
+  .slide a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+  .slide a:hover{
+    transition: .8s ease;
+    color: #fa0000;
+  }  
+  
+
+
 
 .video-container {
     display: flex;

@@ -26,6 +26,27 @@
         style="width: 150vw; height: 40vh"
       />
     </div> -->
+    <!-- <div class="links">
+      <a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge" style="text-decoration: none;"><h1 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: aquamarine;">45 Hard Day Coding Challenge</h1></a>
+    </div> -->
+    <!-- <div class="links"><a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge"></a>45 Hard Day Coding Challenge</div> -->
+
+
+    <div class="center-container">
+      <div class="slider-container">
+        <div class="slider">
+
+          <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge" target="_blank">45 Hard Day Coding Challenge 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
+
+          <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/love-babbar-dsa-sheet-problems" target="_blank">Love Babbar DSA Sheet 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
+
+          <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/top-microsoft-coding-interview-questions" target="_blank">Microsoft Interview Questions 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
+        </div>
+
+      </div>
+    </div>
+    
+    
 
     <div class="video-container">
       <a href="./Topics/Arrays.html" style="text-decoration: none"
@@ -107,5 +128,29 @@
     <footer>
       <p>&copy; DSA_Interview_Prep_HUB.</p>
     </footer>
+
+
+
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const slider = document.querySelector('.slider');
+      
+      function nextSlide() {
+        slideIndex++;
+        if (slideIndex === slides.length) {
+          slideIndex = 0;
+        }
+        updateSlidePosition();
+      }
+      
+      function updateSlidePosition() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+      }
+      
+      // Automatically slide every 4 seconds
+      setInterval(nextSlide, 4000);
+      </script>      
   </body>
 </html>
