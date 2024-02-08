@@ -132,6 +132,19 @@
 
 
     <script>
+
+      // for title change when leave site to another
+
+      let docTitle = document.title;
+      window.addEventListener("blur" ,() =>{
+        document.title = "PREpare for Interview";
+      })
+      window.addEventListener("focus",() =>{
+        document.title = docTitle;
+      })
+
+
+      // for text slides 
       let slideIndex = 0;
       const slides = document.querySelectorAll('.slide');
       const slider = document.querySelector('.slider');
