@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
-/* Reset some default browser styles */
 h1, h3, p {
     margin: 0;
     padding: 0;
@@ -14,17 +13,14 @@ body{
 }
 
 header {
-    background-color: #fb2e2e;
+    background-color: #f5f5f51e;
     color: #fff;
     text-align: center;
     padding: 20px;
-    
 }
-
-.header-image {
+/* .header-image {
     text-align: center;
     margin: 10px 5px;
-    /* border-radius: 150px; */
 }
 .header-image  img{
     border-radius: 30px;
@@ -34,7 +30,7 @@ header {
 .header-image img {
     max-width: 100%;
     height: auto;
-}
+} */
 
 .video-container {
     display: flex;
@@ -64,7 +60,7 @@ header {
 }
 
 .video-box:hover {
-    background-color: #2df4d3a3;
+    background-color: #2df4d36b;
     transform: scale(1.05);
     border-color: #333;
     border: 1.5px solid #fa0000;
@@ -72,7 +68,7 @@ header {
 }
 
 footer {
-    background-color: #fb2e2e;
+    background-color: #f5f5f51e;
     color: #fff;
     text-align: center;
     padding: 10px;
