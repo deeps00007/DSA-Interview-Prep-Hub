@@ -32,19 +32,21 @@
     <!-- <div class="links"><a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge"></a>45 Hard Day Coding Challenge</div> -->
 
 
-    <div class="center-container">
-      <div class="slider-container">
-        <div class="slider">
-
-          <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge" target="_blank">45 Hard Day Coding Challenge 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
+    <div class="slider-container">
+      
+  <div class="slider">
+    <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/register/45-day-coding-challenge" target="_blank">45 Hard Day Coding Challenge 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
 
           <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/love-babbar-dsa-sheet-problems" target="_blank">Love Babbar DSA Sheet 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
 
           <div class="slide"><a href="https://www.codingninjas.com/studio/problem-lists/top-microsoft-coding-interview-questions" target="_blank">Microsoft Interview Questions 🔥<gg style="font-size: small; letter-spacing: 1px;">(Avilable on coding ninja)</gg></a></div>
-        </div>
-
-      </div>
-    </div>
+  </div>
+  <div class="dots-container">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
     
     
 
@@ -132,7 +134,6 @@
 
 
     <script>
-
       // for title change when leave site to another
 
       let docTitle = document.title;
@@ -142,28 +143,40 @@
       window.addEventListener("focus",() =>{
         document.title = docTitle;
       })
+      
 
+const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let index = 0;
 
-      // for text slides 
-      let slideIndex = 0;
-      const slides = document.querySelectorAll('.slide');
-      const slider = document.querySelector('.slider');
-      
-      function nextSlide() {
-        slideIndex++;
-        if (slideIndex === slides.length) {
-          slideIndex = 0;
-        }
-        updateSlidePosition();
-      }
-      
-      function updateSlidePosition() {
-        const slideWidth = slides[0].offsetWidth;
-        slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-      }
-      
-      // Automatically slide every 4 seconds
-      setInterval(nextSlide, 4000);
+  function showSlide(n) {
+    if (n < 0) {
+      index = slides.length - 1;
+    } else if (n >= slides.length) {
+      index = 0;
+    } else {
+      index = n;
+    }
+
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+    });
+  });
+
+  showSlide(index);
+
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 3000); // Change slide every 3 seconds
       </script>      
   </body>
 </html>
