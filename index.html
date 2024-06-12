@@ -3,13 +3,13 @@
   <head>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="icon" href="./photos/DSA_image.png" />
-    <title>&copy; DSA_Interview_Prep_HUB</title>
+    <title>&copy; AceTheInterview</title>
   </head>
 
   <body>
     <header>
       <h1>
-        DSA_Interview_Prep_HUB<br>
+        AceTheInterview<br>
         <span style="font-size: 20px;">
           Your Gateway to crack DSA 🔥
         <br>
@@ -48,9 +48,25 @@
   </div>
 </div>
     
-    
+<div class="quote-container" style="color: aliceblue;">
+  <blockquote id="quote"></blockquote>
+</div>
 
     <div class="video-container">
+
+      <a href="./Topics/Test_series.html" style="text-decoration: none"
+      ><div class="video-box">
+        <h1 style="color: aqua; text-decoration: none">Basic Interview Questions</h1>
+        <p>Total three rounds in there.</p>
+      </div></a
+    >
+    <a href="./Topics/test.html" style="text-decoration: none"
+      ><div class="video-box">
+        <h1 style="color: aqua; text-decoration: none">Test Paper</h1>
+        <p>Practice Questions</p>
+      </div></a
+    >
+
       <a href="./Topics/Arrays.html" style="text-decoration: none"
         ><div class="video-box">
           <h1 style="color: aqua; text-decoration: underline">Arrays</h1>
@@ -128,7 +144,7 @@
     </div>
 
     <footer>
-      <p>&copy; DSA_Interview_Prep_HUB.</p>
+      <p>&copy; AceTheInterview.</p>
     </footer>
 
 
@@ -177,6 +193,23 @@ const slides = document.querySelectorAll('.slide');
   setInterval(() => {
     showSlide(index + 1);
   }, 3000); // Change slide every 3 seconds
+
+  function fetchAndDisplayQuote() {
+  fetch('https://api.quotable.io/random')
+    .then(response => response.json())
+    .then(data => {
+      const quoteElement = document.getElementById('quote');
+      quoteElement.textContent = `"${data.content}" - ${data.author}`;
+    })
+    .catch(error => console.error('Error fetching quote:', error));
+}
+
+// Call fetchAndDisplayQuote initially to display the first quote
+fetchAndDisplayQuote();
+
+// Set interval to fetch and display new quotes every 10 seconds
+setInterval(fetchAndDisplayQuote, 10000);
+
       </script>      
   </body>
 </html>

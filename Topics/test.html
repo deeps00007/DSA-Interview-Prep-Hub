@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url(../photos/gray\ background.jpg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+            font-size: 2em;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .question {
+            background-color: #ffffff11;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .checkbox {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox:checked {
+            background-color: #5cb85c;
+        }
+
+        .question-content {
+            margin-left: 30px;
+            color: #f0f0f0;
+            font-size: larger;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .button {
+            background-color: #434343;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">Test Question</a></h1>
+    </header>
+    <div class="container" id="question-container">
+        <!-- Questions will be inserted here dynamically -->
+    </div>
+    <div class="button-container">
+        <button class="button" onclick="showPreviousQuestions()">Previous</button>
+        <button class="button" onclick="showNextQuestions()">Next</button>
+    </div>
+
+    <script>
+        // Mock DSA question data
+        const dsaQuestions = [
+            { content: "Write a function to reverse a linked list." },
+            { content: "Implement quicksort algorithm." },
+            { content: "Explain the concept of binary search." },
+            { content: "What is the time complexity of merge sort?" },
+            { content: "How does a hash table work?" },
+            { content: "What is the difference between DFS and BFS?" },
+            { content: "Explain dynamic programming with an example." },
+            { content: "What is a heap data structure?" },
+            { content: "What is an AVL tree?" },
+            { content: "How does Dijkstra's algorithm work?" },
+            { content: "Explain the concept of greedy algorithms." },
+            { content: "What is the purpose of a queue in data structures?" },
+            { content: "Explain the process of tree traversal." },
+            { content: "What are the different types of sorting algorithms?" },
+            { content: "How do you detect a cycle in a linked list?" },
+            { content: "What are the basic operations in a stack?" },
+            { content: "Explain the concept of recursion." },
+            { content: "What is a binary search tree?" },
+            { content: "How do you implement a priority queue?" },
+            { content: "What is the role of a binary heap?" }
+        ];
+
+        let startIndex = 0;
+        const checkedState = {};
+
+        function showQuestions() {
+            const questionContainer = document.getElementById('question-container');
+            questionContainer.innerHTML = ''; // Clear previous questions
+            for (let i = startIndex; i < startIndex + 5 && i < dsaQuestions.length; i++) {
+                const question = dsaQuestions[i];
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+                const checkboxId = `checkbox-${i}`;
+                const checked = checkedState[checkboxId] ? 'checked' : '';
+                questionDiv.innerHTML = `
+                    <input type="checkbox" id="${checkboxId}" class="checkbox" ${checked} onchange="updateCheckedState('${checkboxId}')">
+                    <div class="question-content">
+                        <p>${question.content}</p>
+                    </div>
+                `;
+                questionContainer.appendChild(questionDiv);
+            }
+            updateButtons();
+        }
+
+        function updateCheckedState(checkboxId) {
+            checkedState[checkboxId] = document.getElementById(checkboxId).checked;
+        }
+
+        function showNextQuestions() {
+            if (startIndex + 5 < dsaQuestions.length) {
+                startIndex += 5;
+                showQuestions();
+            }
+        }
+
+        function showPreviousQuestions() {
+            if (startIndex - 5 >= 0) {
+                startIndex -= 5;
+                showQuestions();
+            }
+        }
+
+        function updateButtons() {
+            const prevButton = document.querySelector('.button-container .button:nth-child(1)');
+            const nextButton = document.querySelector('.button-container .button:nth-child(2)');
+
+            if (startIndex <= 0) {
+                prevButton.disabled = true;
+            } else {
+                prevButton.disabled = false;
+            }
+
+            if (startIndex + 5 >= dsaQuestions.length) {
+                nextButton.disabled = true;
+            } else {
+                nextButton.disabled = false;
+            }
+        }
+
+        // Display first set of questions when the page loads
+        window.onload = showQuestions;
+    </script>
+</body>
+</html>

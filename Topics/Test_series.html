@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../photos/gray\ background.jpg);
+            background-color: #f0f0f0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #43434339;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+            font-size: 2em;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .nav-button:hover {
+            background-color: #ff0000;
+        }
+
+        .question-container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .question {
+            background-color: #6f6f6f43;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .reveal-button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .reveal-button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: aqua; "><a href="../index.html">Test Series</a></h1>
+    </header>
+
+    <div class="navbar">
+        <button class="nav-button" onclick="showRound('hr')">HR Round</button>
+        <button class="nav-button" onclick="showRound('technical')">Technical Round</button>
+        <button class="nav-button" onclick="showRound('aptitude')">English Aptitude Test</button>
+    </div>
+
+    <div class="question-container">
+        <div id="hr-round" style="display: none;">
+            <div class="question">
+                <p><strong>HR Round - Question 1:</strong> Describe a challenging situation you faced at work and how you handled it.</p>
+                <textarea id="answer1" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer1')">Reveal Answer</button>
+                <div id="answer1-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>HR Round - Question 2:</strong> What motivates you in your career?</p>
+                <textarea id="answer2" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer2')">Reveal Answer</button>
+                <div id="answer2-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>HR Round - Question 3:</strong> How do you handle conflicts in the workplace?</p>
+                <textarea id="answer3" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer3')">Reveal Answer</button>
+                <div id="answer3-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>HR Round - Question 4:</strong> What is your greatest strength and weakness?</p>
+                <textarea id="answer4" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer4')">Reveal Answer</button>
+                <div id="answer4-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>HR Round - Question 5:</strong> Why do you want to work for our company?</p>
+                <textarea id="answer5" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer5')">Reveal Answer</button>
+                <div id="answer5-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>HR Round - Question 6:</strong> Describe your ideal work environment.</p>
+                <textarea id="answer6" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer6')">Reveal Answer</button>
+                <div id="answer6-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+        </div>
+
+        <div id="technical-round" style="display: none;">
+            <div class="question">
+                <p><strong>Technical Round - Question 1:</strong> Explain the concept of recursion.</p>
+                <textarea id="answer7" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer7')">Reveal Answer</button>
+                <div id="answer7-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>Technical Round - Question 2:</strong> What is a binary tree?</p>
+                <textarea id="answer8" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer8')">Reveal Answer</button>
+                <div id="answer8-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>Technical Round - Question 3:</strong> What is the time complexity of binary search?</p>
+                <textarea id="answer9" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer9')">Reveal Answer</button>
+                <div id="answer9-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>Technical Round - Question 4:</strong> Describe the concept of polymorphism in OOP.</p>
+                <textarea id="answer10" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer10')">Reveal Answer</button>
+                <div id="answer10-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>Technical Round - Question 5:</strong> Explain the difference between stack and queue.</p>
+                <textarea id="answer11" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer11')">Reveal Answer</button>
+                <div id="answer11-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>Technical Round - Question 6:</strong> What is a hash table?</p>
+                <textarea id="answer12" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer12')">Reveal Answer</button>
+                <div id="answer12-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+        </div>
+
+        <div id="aptitude-round" style="display: none;">
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 1:</strong> Write an essay on the importance of education in society.</p>
+                <textarea id="answer13" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer13')">Reveal Answer</button>
+                <div id="answer13-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 2:</strong> Discuss the impact of social media on today's youth.</p>
+                <textarea id="answer14" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer14')">Reveal Answer</button>
+                <div id="answer14-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 3:</strong> What are the benefits of reading books?</p>
+                <textarea id="answer15" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer15')">Reveal Answer</button>
+                <div id="answer15-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 4:</strong> How would you handle a situation where you disagreed with a superior?</p>
+                <textarea id="answer16" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer16')">Reveal Answer</button>
+                <div id="answer16-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 5:</strong> Describe your approach to time management.</p>
+                <textarea id="answer17" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer17')">Reveal Answer</button>
+                <div id="answer17-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+
+            <div class="question">
+                <p><strong>English Aptitude Test - Question 6:</strong> Explain the importance of teamwork in a professional setting.</p>
+                <textarea id="answer18" rows="4" cols="50"></textarea>
+                <button class="reveal-button" onclick="revealAnswer('answer18')">Reveal Answer</button>
+                <div id="answer18-answer" class="answer">Answer: This is where the answer will be revealed.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRound(round) {
+            document.getElementById('hr-round').style.display = round === 'hr' ? 'block' : 'none';
+            document.getElementById('technical-round').style.display = round === 'technical' ? 'block' : 'none';
+            document.getElementById('aptitude-round').style.display = round === 'aptitude' ? 'block' : 'none';
+        }
+
+        function revealAnswer(answerId) {
+            const answer = document.getElementById(answerId + '-answer');
+            answer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

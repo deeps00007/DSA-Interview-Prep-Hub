@@ -150,6 +150,49 @@
         /* header button{
             margin: 0 20px;
         } */
+
+        /* Styling for the container */
+  .container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Distribute items along the main axis with space between */
+    align-items: center; /* Center items vertically */
+    margin: 50px auto; /* Center the container horizontally and provide some top margin */
+    width: 80%; /* Set the width of the container to 90% */
+    padding: 20px; /* Add padding inside the container */
+    background-color: #000000; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  /* Styling for the question */
+  #randomQuestion {
+    padding: 10px; /* Add padding around the question */
+    background-color: #ffffff; /* Add a background color */
+    border-radius: 5px; /* Add some border-radius for rounded corners */
+    text-align: center; /* Center the text */
+    opacity: 1; /* Initially set the opacity to 1 */
+    transition: opacity 0.5s ease; /* Add a transition effect for opacity */
+    flex-grow: 1; /* Allow the question to grow to fill available space */
+  }
+
+  /* Styling for the button */
+  button {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    margin-left: 10px; /* Add some margin between the question and the button */
+    padding: 10px 20px; /* Add padding inside the button */
+    border-radius: 5px; /* Add rounded corners to the button */
+    background-color: #007bff; /* Set background color */
+    color: #ffffff; /* Set text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Add a transition effect for background color */
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+
     </style>
 </head>
 
@@ -167,6 +210,12 @@
                 style="justify-content: center;"></button>
     </header>
 
+
+    <div class="container">
+        <p id="randomQuestion">Let us choose your question.</p>
+        <button onclick="generateRandomQuestion()">Generate Random Question</button>
+      </div>
+    
     <table>
         <thead>
             <tr>
@@ -1069,7 +1118,7 @@
                 <li><a href="/contacts.html" target="_blank">Contact</a></li> -->
             </ul>
         </nav>
-        &copy; DSA_interview_prep_HUB
+        &copy; AceTheInterview
     </footer>
 </body>
 <script>
@@ -1105,6 +1154,32 @@
     audio.addEventListener("ended", () => {
         playNextSong();
     });
+
+    // List of questions with corresponding links
+var questions = [
+    "<a href='#'>What is the capital of France?</a>",
+    "<a href='#'>Who wrote 'Romeo and Juliet'?</a>",
+    "<a href='#'>What is the powerhouse of the cell?</a>",
+    "<a href='#'>What is the tallest mountain in the world?</a>",
+    "<a href='#'>What is the chemical symbol for water?</a>"
+];
+
+// Function to generate a random question with animation
+function generateRandomQuestion() {
+    // Randomly pick a question
+    var randomIndex = Math.floor(Math.random() * questions.length);
+    var randomQuestion = questions[randomIndex];
+    
+    // Fade out the existing question
+    var questionElement = document.getElementById("randomQuestion");
+    questionElement.style.opacity = 0;
+    
+    // Wait for the animation to complete, then update the question and fade it back in
+    setTimeout(function() {
+        questionElement.innerHTML = "Randomly chosen question: " + randomQuestion;
+        questionElement.style.opacity = 1;
+    }, 500); // Wait for 500 milliseconds (0.5 seconds) for the fade-out transition
+}
 </script>
 
 </html>
